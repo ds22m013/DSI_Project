@@ -1,0 +1,8 @@
+setup docker postgres:
+
+CMD:
+
+docker pull postgres
+
+docker run --name dsi_postgres -p 5432:5432 -e POSTGRES_PASSWORD=DSIholiday -d postgres
+
