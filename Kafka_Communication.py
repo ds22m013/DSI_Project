@@ -31,7 +31,7 @@ def kafka_receive(topic_name):
         auto_offset_reset='earliest',
         consumer_timeout_ms=1000,
         auto_commit_interval_ms=1000,
-        #group_id=config.kafka_group_name,
+        group_id=config.kafka_group_name,
         api_version=(0,11,5),
         value_deserializer=lambda x: loads(x.decode('utf-8'))
     )
